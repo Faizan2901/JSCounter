@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Counter</title>
+</head>
+<body>
+    <style>
+        div.cn {
+            margin: 10px;
+            border: solid 2px;
+            padding: 10px;
+            width: fit-content;
+            font-size: 20px;
+        }
+
+        #t {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .button {
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+    </style>
+    <script>
+        let count = 0;
+        function main(){
+            
+            counter()
+            total()
+        }
+        function total(){
+            const t = document.getElementById('t');
+            t.innerText = "Total count : " + count;
+            
+        }
+        
+        function counter(){
+            
+            
+            const para = document.createElement("div");
+            
+            document.body.appendChild(para);
+            para.className='cn';
+            // const n = document.getElementById("1");
+            
+            count = count + 1;
+            para.innerText =  "count :" + count;
+            // n.innerText = count;
+        }
+
+    </script>
+    <div id="t"></div>
+
+    <!-- <h1> Total count : <P id="1"></P></h1> -->
+    
+    
+    <input type="button" class="button" value="Count" onclick="main()">
+</body>
+</html>
